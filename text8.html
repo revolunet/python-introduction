@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 9</title>
+</head>
+<body text="#000000" bgcolor="#D0D5D7" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">Première page</a> <a href="text7.html">Précédent</a> <a href="text9.html">Suivant</a> <a href="text11.html">Dernière page</a> <a href="img8.html">Images</a></center><br>
+<h1 style="direction:ltr;">Python requests</h1>
+<ul><li style="direction:ltr;"><h2><b><font color="#7F0055">import</b></font> requests </h2></li>
+<li style="direction:ltr;"><h2><b><font color="#7F0055">import</b></font> simplejson </h2></li>
+<li style="direction:ltr;"><h2>req = requests.get(<font color="#2A00FF">'https://api.github.com/users/revolunet/repos'</font>,          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;auth=(<font color="#2A00FF">'revolunet'</font>,<font color="#2A00FF">'ucrazy&nbsp;?'</font>)) </h2></li>
+<li style="direction:ltr;"><h2><font color="#33CC66"># convert the Json to a python dictionary</font></h2></li>
+<li style="direction:ltr;"><h2>data = simplejson.loads(req.content) </h2></li>
+<li style="direction:ltr;"><h2><b><font color="#7F0055"></b></font></h2></li>
+<li style="direction:ltr;"><h2><b><font color="#7F0055">for</b></font> repo <b><font color="#7F0055">in</b></font> data: </h2></li>
+<li style="direction:ltr;"><h2><b>    <font color="#7F0055">print</b></font> repo[<font color="#2A00FF">'name'</font>], <font color="#2A00FF">':'</font>, repo[<font color="#2A00FF">'description'</font>] </h2></li>
+</ul></body>
+</html>

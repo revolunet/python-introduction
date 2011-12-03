@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+     "http://www.w3.org/TR/html4/transitional.dtd">
+<html>
+<head>
+  <meta HTTP-EQUIV=CONTENT-TYPE CONTENT="text/html; charset=utf-8">
+  <title>Diapo 11</title>
+</head>
+<body text="#000000" bgcolor="#D0D5D7" link="#000080" vlink="#0000CC" alink="#000080">
+<center>
+<a href="text0.html">Première page</a> <a href="text9.html">Précédent</a> <a href="text11.html">Suivant</a> <a href="text11.html">Dernière page</a> <a href="img10.html">Images</a></center><br>
+<h1 style="direction:ltr;">Django ORM query</h1>
+<ul><li style="direction:ltr;"><h2>filters = { </h2></li>
+<li style="direction:ltr;"><h2>    <font color="#2A00FF">'author__name__</font><font color="#FF0000">startswith</font><font color="#2A00FF">'</font>: <font color="#2A00FF">'Guido'</font>,  </h2></li>
+<li style="direction:ltr;"><h2>    <font color="#2A00FF">'date_published__</font><font color="#FF0000">gte</font><font color="#2A00FF">'</font>:datetime(2011, 1, 1), </h2></li>
+<li style="direction:ltr;"><h2>    <font color="#2A00FF">'price__</font><font color="#FF0000">lte</font><font color="#2A00FF">'</font>:30 </h2></li>
+<li style="direction:ltr;"><h2>} </h2></li>
+<li style="direction:ltr;"><h2>results = Books.objects.filter(**filters) </h2></li>
+<li style="direction:ltr;"><h2>results = results.exclude(publisher__name = <font color="#2A00FF">'Eyrolles'</font>) </h2></li>
+<li style="direction:ltr;"><h2>results = results.order_by(<font color="#2A00FF">'price'</font>)[:50] </h2></li>
+<li style="direction:ltr;"><h2><b><font color="#7F0055"></b></font></h2></li>
+<li style="direction:ltr;"><h2><b><font color="#7F0055">print</b></font> results </h2></li>
+</ul></body>
+</html>
